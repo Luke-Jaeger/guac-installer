@@ -23,19 +23,19 @@ export PATH" >> /etc/profile ;
 source /etc/profile ;
 
 ## step 2.3
-useradd -m -U -d /opt/tomcat -s /bin/false tomcat ;
+# useradd -m -U -d /opt/tomcat -s /bin/false tomcat ;
 
 ## step 2.4
-curl -O --output-dir /tmp https://downloads.apache.org/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100.tar.gz ;
+# curl -O --output-dir /tmp https://downloads.apache.org/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100.tar.gz ;
 
 ## step 2.5
-tar -xzf /tmp/apache-tomcat-*.tar.gz -C /opt/tomcat/ ;
+# tar -xzf /tmp/apache-tomcat-*.tar.gz -C /opt/tomcat/ ;
 
 ## step 2.6
-mv /opt/tomcat/apache-tomcat-* /opt/tomcat/tomcatapp ;
+# mv /opt/tomcat/apache-tomcat-* /opt/tomcat/tomcatapp ;
 
 ## step 2.7
-chown -R tomcat:tomcat /opt/tomcat ;
+# chown -R tomcat:tomcat /opt/tomcat ;
 
 ## step 2.8
 find /opt/tomcat/tomcatapp/bin/ -type f -iname "*.sh" -exec chmod +x {} \;
